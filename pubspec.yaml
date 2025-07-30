@@ -21,6 +21,7 @@ flutter:
   assets:
     - assets/images/broccoli_banner.jpg
     - assets/images/farm_pattern.jpg
+    - assets/screenshots/broccoli_ss1.png
     - assets/animations/broccoli_growth.json
     - assets/fonts/SolaimanLipi_29-05-06.ttf
   fonts:
