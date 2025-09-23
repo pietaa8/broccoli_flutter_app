@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart'; // For Lottie animation
-import 'weather_page.dart';
+import 'weather_checker_page.dart'; // Updated to use WeatherCheckerPage
 import 'soil_page.dart';
 import 'seed_quality_page.dart';
 import 'growth_page.dart';
@@ -11,6 +11,8 @@ import 'disease_page.dart';
 import 'bangladesh_agriculture_page.dart';
 import 'nutrition_page.dart';
 import 'marketing_page.dart';
+import 'about_page.dart';
+import 'settings_page.dart';
 
 void main() {
   runApp(const BroccoliApp());
@@ -70,9 +72,9 @@ class _HomePageState extends State<HomePage>
 
   final List<Map<String, dynamic>> sections = const [
     {
-      'title': 'আবহাওয়ার অবস্থা',
-      'icon': Icons.wb_sunny,
-      'page': WeatherPage(),
+      'title': 'আবহাওয়া চেকার', // Updated title
+      'icon': Icons.cloud,
+      'page': WeatherCheckerPage(),
     },
     {
       'title': 'মাটির অবস্থা',
@@ -165,7 +167,10 @@ class _HomePageState extends State<HomePage>
               title: Text('অ্যাপ সম্পর্কে'),
               onTap: () {
                 Navigator.pop(context);
-                // Navigate to About page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const AboutPage()),
+                );
               },
             ),
             ListTile(
@@ -173,7 +178,10 @@ class _HomePageState extends State<HomePage>
               title: Text('সেটিংস'),
               onTap: () {
                 Navigator.pop(context);
-                // Navigate to Settings page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SettingsPage()),
+                );
               },
             ),
           ],
@@ -181,11 +189,12 @@ class _HomePageState extends State<HomePage>
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text('আবহাওয়া চেকার শীঘ্রই আসছে!')),
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const WeatherCheckerPage()),
           );
         },
-        child: Icon(Icons.cloud),
+        child: const Icon(Icons.cloud),
         backgroundColor: Colors.green[700],
       ),
       body: Stack(
