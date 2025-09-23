@@ -1,5 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart'; // For Lottie animation
+import 'weather_page.dart';
+import 'soil_page.dart';
+import 'seed_quality_page.dart';
+import 'growth_page.dart';
+import 'care_page.dart';
+import 'flower_fruit_page.dart';
+import 'fruit_ripening_page.dart';
+import 'disease_page.dart';
+import 'bangladesh_agriculture_page.dart';
+import 'nutrition_page.dart';
+import 'marketing_page.dart';
 
 void main() {
   runApp(const BroccoliApp());
@@ -61,67 +72,57 @@ class _HomePageState extends State<HomePage>
     {
       'title': 'আবহাওয়ার অবস্থা',
       'icon': Icons.wb_sunny,
-      'page': PlaceholderPage(title: 'আবহাওয়ার অবস্থা'),
+      'page': WeatherPage(),
     },
     {
       'title': 'মাটির অবস্থা',
       'icon': Icons.terrain,
-      'page': PlaceholderPage(title: 'মাটির অবস্থা'),
+      'page': SoilPage(),
     },
     {
       'title': 'বীজের গুণমান',
       'icon': Icons.grass,
-      'page': PlaceholderPage(title: 'বীজের গুণমান'),
+      'page': SeedQualityPage(),
     },
     {
       'title': 'বৃদ্ধি',
       'icon': Icons.trending_up,
-      'page': PlaceholderPage(title: 'বৃদ্ধি'),
-    },
-    {
-      'title': 'দুর্বলতা/রোগ',
-      'icon': Icons.bug_report,
-      'page': PlaceholderPage(title: 'দুর্বলতা/রোগ'),
+      'page': GrowthPage(),
     },
     {
       'title': 'পরিচর্যা',
       'icon': Icons.local_florist,
-      'page': PlaceholderPage(title: 'পরিচর্যা'),
-    },
-    {
-      'title': 'গাছের বৃদ্ধি',
-      'icon': Icons.nature,
-      'page': PlaceholderPage(title: 'গাছের বৃদ্ধি'),
+      'page': CarePage(),
     },
     {
       'title': 'ফুল/ফল',
       'icon': Icons.local_florist,
-      'page': PlaceholderPage(title: 'ফুল/ফল'),
+      'page': FlowerFruitPage(),
     },
     {
       'title': 'ফল পাকা',
       'icon': Icons.eco,
-      'page': PlaceholderPage(title: 'ফল পাকা'),
+      'page': FruitRipeningPage(),
     },
     {
       'title': 'রোগ',
       'icon': Icons.healing,
-      'page': PlaceholderPage(title: 'রোগ'),
+      'page': DiseasePage(),
     },
     {
       'title': 'বাংলাদেশের কৃষিতে প্রয়োজনীয়তা',
       'icon': Icons.agriculture,
-      'page': PlaceholderPage(title: 'বাংলাদেশের কৃষিতে প্রয়োজনীয়তা'),
+      'page': BangladeshAgriculturePage(),
     },
     {
       'title': 'পুষ্টি',
       'icon': Icons.food_bank,
-      'page': PlaceholderPage(title: 'পুষ্টি'),
+      'page': NutritionPage(),
     },
     {
       'title': 'বাজারজাতকরণ',
       'icon': Icons.store,
-      'page': PlaceholderPage(title: 'বাজারজাতকরণ'),
+      'page': MarketingPage(),
     },
   ];
 
@@ -338,25 +339,6 @@ class _HomePageState extends State<HomePage>
             ],
           ),
         ],
-      ),
-    );
-  }
-}
-
-class PlaceholderPage extends StatelessWidget {
-  final String title;
-
-  const PlaceholderPage({super.key, required this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(title)),
-      body: Center(
-        child: Text(
-          '$title - বিস্তারিত আসছে!',
-          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
       ),
     );
   }

@@ -22,6 +22,17 @@ flutter:
     - assets/images/broccoli_banner.jpg
     - assets/images/farm_pattern.jpg
     - assets/screenshots/broccoli_ss1.png
+    - assets/images/broccoli_field.jpg
+    - assets/images/broccoli_care.jpg
+    - assets/images/broccoli_disease.jpg
+    - assets/images/broccoli_flower.jpg
+    - assets/images/fruit_ripening.jpg
+    - assets/images/grown_broccoli.jpg
+    - assets/images/broccoli_marketing.jpg
+    - assets/images/broccoli_nutrition.jpg
+    - assets/images/seed_quality.jpg
+    - assets/images/soil_condition.jpg
+    - assets/images/weather_condition.png
     - assets/animations/broccoli_growth.json
     - assets/fonts/SolaimanLipi_29-05-06.ttf
   fonts:
