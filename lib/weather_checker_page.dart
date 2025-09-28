@@ -49,7 +49,7 @@ class WeatherCheckerPage extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),
                     image: const DecorationImage(
-                      image: AssetImage('assets/images/weather_condition.jpg'),
+                      image: AssetImage('assets/images/weather_condition.png'),
                       fit: BoxFit.cover,
                     ),
                   ),

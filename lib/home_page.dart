@@ -13,6 +13,7 @@ import 'nutrition_page.dart';
 import 'marketing_page.dart';
 import 'about_page.dart';
 import 'settings_page.dart';
+import 'broccoli_variation.dart';
 
 void main() {
   runApp(const BroccoliApp());
@@ -72,9 +73,9 @@ class _HomePageState extends State<HomePage>
 
   final List<Map<String, dynamic>> sections = const [
     {
-      'title': 'আবহাওয়া চেকার', // Updated title
+      'title': 'ব্রকলির জাত',
       'icon': Icons.cloud,
-      'page': WeatherCheckerPage(),
+      'page': BroccoliVariationPage(),
     },
     {
       'title': 'মাটির অবস্থা',
@@ -151,7 +152,7 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
+      endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -216,6 +217,21 @@ class _HomePageState extends State<HomePage>
                 expandedHeight: 250,
                 floating: false,
                 pinned: true,
+                actions: [
+                  Builder(
+                    builder: (context) => IconButton(
+                      icon: const Icon(
+                        Icons.menu,
+                        color: Colors.white,
+                        size: 30,
+                      ),
+                      onPressed: () {
+                        Scaffold.of(context).openEndDrawer();
+                      },
+                      tooltip: 'মেনু',
+                    ),
+                  ),
+                ],
                 flexibleSpace: FlexibleSpaceBar(
                   background: Stack(
                     fit: StackFit.expand,

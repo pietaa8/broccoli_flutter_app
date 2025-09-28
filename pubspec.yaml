@@ -34,6 +34,9 @@ flutter:
     - assets/images/seed_quality.jpg
     - assets/images/soil_condition.jpg
     - assets/images/weather_condition.png
+    - assets/images/broccoli_varieties.jpg
+    - assets/images/about_app.jpg
+    - assets/images/settings_app.jpg
     - assets/animations/broccoli_growth.json
     - assets/fonts/SolaimanLipi_29-05-06.ttf
   fonts:
